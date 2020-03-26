@@ -4,7 +4,7 @@
 
 GRAPHS=../data/MUTAG/*.gml
 LABELS=../data/MUTAG/Labels.txt
-SCRIPT=../main.py
+SCRIPT=../src/main.py
 
 echo "h acc_topological_c sdev_topological_c acc_original sdev_original"
 
