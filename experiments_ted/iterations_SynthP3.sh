@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+# based on P-WL/experiments/iterations_mutag.sh
 # Starts an experiment about the number of iterations on the MUTAG data
-# set. The performance of the *original* features is plotted against the
+# set. The performance of the *original* Weisfeiler Lehman features is plotted against the
 # performance of the *topological* features.
 
 name=Synth_P3
@@ -21,3 +22,7 @@ for dataset in ../../WWL/${name}/*; do
     echo $h $ACCURACY_TOP $ACCURACY_ORG
   done
 done | tee ${name}.results
+
+# clean up the mess
+mkdir ${name}.logs
+mv None*.log ${name}.logs

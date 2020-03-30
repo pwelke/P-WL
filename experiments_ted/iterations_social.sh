@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+
+# based on P-WL/experiments/iterations_mutag.sh
 # Starts an experiment about the number of iterations on the MUTAG data
-# set. The performance of the *original* features is plotted against the
+# set. The performance of the *original* Weisfeiler features is plotted against the
 # performance of the *topological* features.
 
 
@@ -20,3 +22,8 @@ for dataset in s60to80 s80to100 s160to180 s200to220 s200to250 s240to260; do
     echo $h $ACCURACY_TOP $ACCURACY_ORG
   done
 done | tee egonets.results
+
+# clean up the mess
+mkdir ${name}.logs
+mv None*.log ${name}.logs
+
