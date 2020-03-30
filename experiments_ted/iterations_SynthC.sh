@@ -4,7 +4,7 @@
 # set. The performance of the *original* features is plotted against the
 # performance of the *topological* features.
 
-name=Synth_P3
+name=Synth_C
 
 for dataset in ../../WWL/${name}/*; do
   GRAPHS=${dataset}/*.gml
