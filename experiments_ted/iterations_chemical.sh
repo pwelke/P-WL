@@ -6,9 +6,9 @@
 # set. The performance of the *original* Weisfeiler features is plotted against the
 # performance of the *topological* features.
 
-name=egonets
+name=data
 
-for dataset in s60to80 s80to100 s160to180 s200to220 s200to250 s240to260; do
+for dataset in MUTAG NCI1 IMDB_BINARY REDDIT_BINARY BZR DHFR; do
   GRAPHS=../../WWL/${name}/${dataset}/*.gml
   LABELS=../../WWL/${name}/${dataset}/Labels.txt
   SCRIPT=../src/main.py
