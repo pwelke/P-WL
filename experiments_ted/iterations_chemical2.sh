@@ -8,7 +8,7 @@
 
 name=data
 
-for dataset in MUTAG NCI1 IMDB_BINARY REDDIT_BINARY BZR DHFR; do
+for dataset in BZR DHFR COX2; do
   GRAPHS=../../WWL/${name}/${dataset}/*.gml
   LABELS=../../WWL/${name}/${dataset}/Labels.txt
   SCRIPT=../src/main.py
@@ -22,9 +22,9 @@ for dataset in MUTAG NCI1 IMDB_BINARY REDDIT_BINARY BZR DHFR; do
     ACCURACY_ORG=`$SCRIPT   -u -n $h $GRAPHS -l $LABELS 2>&1 | grep Accuracy  | cut -f 2,4 -d " "`
     echo $h $ACCURACY_TOP $ACCURACY_ORG
   done
-done | tee ${name}.results
+done | tee ${name}2.results
 
 # clean up the mess
-mkdir ${name}.logs
-mv None*.log ${name}.logs
+mkdir ${name}2.logs
+mv None*.log ${name}2.logs
 
